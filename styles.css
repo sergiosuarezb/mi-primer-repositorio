@@ -1,0 +1,124 @@
+/* Estilo base para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente predeterminada para todo el documento */
+    line-height: 1.6; /* Controla el espacio entre líneas de texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+    background-color: #f4f4f4; /* Fondo gris claro para la página */
+}
+
+/* Estilo para la cabecera */
+header {
+    background-color: #333; /* Fondo oscuro para la cabecera */
+    color: white; /* Texto blanco en la cabecera */
+    padding: 1rem; /* Añade espacio dentro de la cabecera */
+}
+
+/* Estilo para el menú de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    display: flex; /* Hace que la lista sea horizontal */
+    justify-content: center; /* Centra los elementos del menú */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+nav ul li {
+    margin: 0 15px; /* Añade espacio horizontal entre elementos del menú */
+}
+
+nav ul li a {
+    color: white; /* Establece el color de los enlaces a blanco */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    transition: color 0.3s ease; /* Transición suave de color al pasar el cursor */
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Color verde al pasar el cursor sobre los enlaces */
+}
+
+/* Área de contenido principal */
+main {
+    max-width: 1200px; /* Establece el ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    padding: 20px; /* Añade espacio alrededor del contenido */
+}
+
+/* Estilo para las secciones */
+section {
+    background-color: white; /* Fondo blanco para las secciones de contenido */
+    margin-bottom: 20px; /* Espacio entre secciones */
+    padding: 20px; /* Espacio interno en las secciones */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Efecto de sombra sutil */
+}
+
+/* Estilo para el logotipo */
+.logo {
+    max-width: 200px; /* Ancho máximo para el logotipo */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Hace que el logotipo sea un elemento de bloque */
+    margin: 20px auto; /* Centra el logotipo con espacio arriba y abajo */
+    transition: transform 0.3s ease; /* Animación suave para el efecto al pasar el cursor */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del logotipo al pasar el cursor */
+}
+
+/* Estilo para tablas */
+table {
+    width: 100%; /* Hace que las tablas ocupen todo el ancho de su contenedor */
+    border-collapse: collapse; /* Elimina el espacio entre celdas de la tabla */
+    margin-top: 20px; /* Añade espacio encima de las tablas */
+}
+
+table, th, td {
+    border: 1px solid #ddd; /* Borde gris claro para las celdas de la tabla */
+}
+
+th, td {
+    padding: 12px; /* Añade espacio dentro de las celdas de la tabla */
+    text-align: left; /* Alinea el texto a la izquierda en las celdas */
+}
+
+th {
+    background-color: #f2f2f2; /* Fondo gris claro para los encabezados de tabla */
+}
+
+table img {
+    max-width: 100px; /* Limita el tamaño de las imágenes en las tablas */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center; /* Centra el texto en el pie de página */
+    background-color: #333; /* Fondo oscuro para el pie de página */
+    color: white; /* Texto blanco en el pie de página */
+    padding: 10px; /* Añade espacio dentro del pie de página */
+}
+
+/* Diseño responsive para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Apila los elementos del menú verticalmente en pantallas pequeñas */
+        align-items: center; /* Centra los elementos del menú apilados */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Añade espacio vertical entre elementos del menú */
+    }
+
+    /* Nota: Hay un problema en el estilo responsive de la tabla a continuación */
+    table th tr {
+       display: block; /* Hace que los encabezados de tabla se muestren como bloques */
+       font-size: 12px; /* Reduce el tamaño de fuente en las tablas */
+    }
+    
+    th {
+        text-align: left; /* Alinea el texto del encabezado a la izquierda */
+        position: relative; /* Usado para posicionamiento */
+        padding-left: 50%; /* Empuja el contenido hacia la mitad derecha */
+    }
+    /* El estilo responsive de la tabla podría mejorarse - actualmente está incompleto */
+}
